@@ -4,8 +4,7 @@ import Navbar from './Navbar'
 
 const Home = () => {
   return (
-    <div className='md:flex overflow-x-hidden min-h-[100vh]'>
-      <Navbar />
+    <div className='overflow-x-hidden min-h-[100vh]'>  
       <HomeSection />
     </div>
   )

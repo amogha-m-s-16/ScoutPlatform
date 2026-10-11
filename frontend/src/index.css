@@ -10,3 +10,7 @@
     --font-serif : 'Instrument Serif', serif;
     --font-google-sans : 'Google Sans Flex', sans-serif;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}

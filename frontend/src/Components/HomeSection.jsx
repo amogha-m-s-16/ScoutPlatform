@@ -4,18 +4,14 @@ const HomeSection = () => {
   return (
     <div className=''>
       
-      <h1 className='text-[#5a5b5c] font-instrument text-5xl md:text-6xl lg:text-8xl text-center mt-10 mb-5 md:mt-15 md:mb-10'>
+      <h1 className='text-[#5a5b5c] font-instrument text-5xl md:text-6xl lg:text-8xl text-center py-10 md:py-15'>
         Welcome to <span className='text-black'>TalentHub</span>
       </h1>
 
-      <h2 className='text-[#5a5b5c] font-google-sans text-[18px] md:text-[20px] lg:text-[20px] text-center px-10 md:px-20'>
+      <h2 className='text-[#404346] font-instrument italic tracking-md font-medium text-[20px] md:text-[22px] text-center px-10 md:px-20'>
         Every Local Player Deserves a 
-        <span className='text-black font-instrument italic tracking-[0.09em] px-1 font-semibold tracking-normal text-[22px]'> Spotlight!</span>
+        <span className='text-black font-instrument italic tracking-md px-1 font-semibold tracking-normal text-[22px]'> Spotlight!</span>
       </h2>
-
-      <p className='text-[#5a5b5c] font-poppins text-[14px] md:text-[16px] text-center mt-5 px-10 md:px-20'>
-        A community-powered scouting platform built to discover and elevate raw athletic talent <br /> from local grounds directly to academies, clubs, and real opportunities.
-      </p>
 
       <div className='flex flex-col md:flex-row items-center gap-4 md:gap-8 py-5 md:py-10 px-10 md:px-20'>
         <div className='bg-[#EAE8E4] p-6 rounded-lg shadow-md border-zinc-200 w-full md:w-1/3 hover:scale-101 transition duration-300 cursor-pointer'>

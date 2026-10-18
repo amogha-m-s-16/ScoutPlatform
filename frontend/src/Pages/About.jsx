@@ -40,17 +40,17 @@ const About = () => {
     <div className='overflow-x-hidden min-h-screen bg-[#F7F7F5]'>
       <AboutSection />
 
-      <div className='p-5 md:px-13 lg:px-20 md:py-10'>
-        <h1 className='text-3xl md:text-4xl lg:text-5xl text-center font-instrument font-semibold tracking-wider py-5'>
+      <div className='bg-black border-b-2 rounded-2xl p-5 md:px-13 lg:px-20 md:py-10'>
+        <h1 className='text-white text-3xl md:text-4xl lg:text-5xl text-center font-instrument font-semibold tracking-wider py-5'>
           How it 
-          <span className='text-red-500 italic'>Works?</span>
+          <span className='text-red-500 italic'>  Works?</span>
         </h1>
         {/*{Info.map((item) => ())}*/}
         <div className='md:flex md:flex-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20'>
         {Info.map((item) => (
-          <div className='flex flex-col justify-between max-w-3xl w-full'>
-            <div className='flex gap-5 md:gap-7 lg:gap-9 py-5'>
-              <span className='p-3 text-[16px] md:text-[18px] lg:text-[20px] text-red-500 border-2 border-black/10 shadow-md rounded-full'>
+          <div className='flex flex-col justify-between max-w-3xl w-full bg-white hover:scale-101 duration-300 cursor-pointer border-2 border-black/10 rounded-2xl shadow-md px-5 py-3'>
+            <div className='flex py-5'>
+              <span className='p-3 text-[16px] md:text-[18px] lg:text-[20px] text-red-500 border-2 border-black/10 rounded-4xl'>
                 {item.logo}
               </span>
 
@@ -60,11 +60,11 @@ const About = () => {
 
             </div>
 
-            <h1 className='font-poppins font-semibold'>
+            <h1 className='text-red-500 py-3 font-jet-mono font-semibold'>
               {item.heading}
             </h1>
 
-            <p>
+            <p className='py-3 font-google-sans '>
               {item.para}
             </p>
           </div>

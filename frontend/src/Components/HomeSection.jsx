@@ -1,10 +1,15 @@
 import React from 'react'
-import { BsDashLg } from "react-icons/bs";
-import { BsArrowRight } from "react-icons/bs";
+import { BsDashLg, BsArrowRight } from "react-icons/bs";
 
 const HomeSection = () => {
   return (
-    <div className='h-full p-10 lg:p-10 flex flex-col justify-around items-start'>
+    <div 
+      className='relative min-h-[calc(100vh-70px)] w-full flex flex-col justify-center items-start px-6 md:px-14 lg:px-20 py-16 bg-cover bg-right md:bg-center bg-no-repeat opacity-50'
+      style={{ backgroundImage: "url('/home.png')" }}
+    >
+
+
+      <div className='relative z-10 max-w-2xl flex flex-col items-start'>
       <h1 className='text-5xl md:text-8xl font-bold font-instrument text-black text-left p-5 md:px-13 lg:px-20 md:py-10'>
         Real Talent. <br />
         <span className='text-red-500 italic '>Bigger</span> Dreams.
@@ -22,6 +27,8 @@ const HomeSection = () => {
         <button className='text-black border-2 border-[#f9f9f9] px-4 py-2 md:px-5 md:py-3 rounded-3xl hover:-translate-y-1 hover:shadow-md duration-300 cursor-pointer'>
           Learn More
         </button>
+        </div>
+
       </div>
 
     </div>

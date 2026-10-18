@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutSection = () => {
   return (
-    <div className='grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-15 lg:gap-20 px-5 py-10  lg:px-20 md:py-15'>
+    <div className='border-b-2 border-black/10 grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-15 lg:gap-20 px-5 py-10  lg:px-20 md:py-15'>
         <div className='border-r-2 border-b-2 border-black/10 shadow-md px-5 md:px-10 lg:px-15'>
             <h1 className='flex flex-col justify-center font-instrument italic text-red-500 font-bold tracking-xs text-4xl md:text-7xl'>
                 500+

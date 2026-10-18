@@ -23,13 +23,13 @@ const Navbar = () => {
     <div className='sticky top-0 left-0 z-50'>
 
       
-      <div className={`hidden font-jet-mono text-black md:flex md:justify-between md:items-center px-6 py-3 transition-all duration-300 ${navClass}`}>
+      <div className={`hidden font-poppins text-black md:flex md:justify-between md:items-center px-6 py-3 transition-all duration-300 ${navClass}`}>
         <img src="" alt="" />
 
         <ul className='flex gap-x-5'>
           <li className='p-2 text-[16px] text-[#5a5b5c] hover:text-black duration-300 ease-in'><a href="">Home</a></li>
           <li className='p-2 text-[16px] text-[#5a5b5c] hover:text-black duration-300 ease-in'><a href="">Talents</a></li>
-          <li className='p-2 text-[16px] text-[#5a5b5c] hover:text-black duration-300 ease-in'><a href="">Opportunities</a></li>
+          <li className='p-2 text-[16px] text-[#5a5b5c] hover:text-black duration-300 ease-in'><a href="">About</a></li>
         </ul>
 
         <button className='bg-[#d93636] text-white px-4 py-2 rounded-full hover:-translate-y-1 hover:shadow-md transition duration-300 cursor-pointer'>
@@ -54,7 +54,7 @@ const Navbar = () => {
       
       <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${menuOpen ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'} ${scrolled ? 'bg-white/60 backdrop-blur-md' : 'bg-white'}`}>
         
-        <ul className='flex flex-col font-jet-mono text-black px-6 py-4 gap-y-1 border-t border-[#f0f0f0]'>
+        <ul className='flex flex-col font-poppins text-black px-6 py-4 gap-y-1 border-t border-[#f0f0f0]'>
           <li className='py-3 px-2 text-[16px] text-[#5a5b5c] hover:text-black border-b border-[#f0f0f0] transition-colors duration-200'>
             <a href="">Home</a>
           </li>
@@ -64,7 +64,7 @@ const Navbar = () => {
           </li>
 
           <li className='py-3 px-2 text-[16px] text-[#5a5b5c] hover:text-black border-b border-[#f0f0f0] transition-colors duration-200'>
-            <a href="">Opportunities</a>
+            <a href="">About</a>
           </li>
 
           <li className='pt-4'>

@@ -17,7 +17,7 @@ const Navbar = () => {
 
   const navClass = scrolled
     ? 'bg-white/60 backdrop-blur-md border-b border-white/30 shadow-sm'
-    : 'bg-white border-b-2 border-[#f5f5f5]';
+    : 'bg-white/40 border-b-2 border-[#f5f5f5] ';
 
   return (
     <div className='sticky top-0 left-0 z-50'>
@@ -32,7 +32,7 @@ const Navbar = () => {
           <li className='p-2 text-[16px] text-[#5a5b5c] hover:text-black duration-300 ease-in'><a href="">About</a></li>
         </ul>
 
-        <button className='bg-[#d93636] text-white px-4 py-2 rounded-full hover:-translate-y-1 hover:shadow-md transition duration-300 cursor-pointer'>
+        <button className='bg-red-600 text-white px-4 py-2 rounded-full hover:-translate-y-1 hover:shadow-md transition duration-300 cursor-pointer'>
           Sign In
         </button>
       </div>
@@ -68,7 +68,7 @@ const Navbar = () => {
           </li>
 
           <li className='pt-4'>
-            <button className='w-full bg-[#d93636] text-white px-4 py-2 rounded-full hover:shadow-md transition duration-300'>
+            <button className='w-full bg-red-600 text-white px-4 py-2 rounded-full hover:shadow-md transition duration-300'>
               Sign In
             </button>
           </li>

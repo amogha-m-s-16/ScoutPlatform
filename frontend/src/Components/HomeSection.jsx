@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { BsDashLg, BsArrowRight } from "react-icons/bs";
 
 const HomeSection = () => {
@@ -20,14 +21,21 @@ const HomeSection = () => {
       </p>
 
       <div className='flex items-center gap-5 md:gap-15 lg:gap-20 p-5 md:px-13 lg:px-20 text-[13px] md:text-[17px] font-google-sans'>
-        <button className='flex text-white px-4 py-2 md:px-5  md:py-3 rounded-3xl bg-red-600 cursor-pointer hover:scale-95 hover:shadow-md duration-300 ease-in-out'>
-          Explore Talents <BsArrowRight className='hover:rotate-90 duration-300 ml-2 mt-1'/>
-        </button>
+        <Link 
+          to="/talents"
+          className='flex items-center text-white px-4 py-2 md:px-5 md:py-3 rounded-3xl bg-red-600 cursor-pointer hover:scale-95 hover:shadow-md duration-300 ease-in-out'
+        >
+          <span>Explore Talents</span>
+          <BsArrowRight className='hover:rotate-90 duration-300 ml-2 mt-0.5'/>
+        </Link>
 
-        <button className='text-[#f9f9f9] border-2 border-[#f9f9f9] px-4 py-2 md:px-5 md:py-3 rounded-3xl hover:-translate-y-1 hover:shadow-md duration-300 cursor-pointer'>
+        <Link 
+          to="/about"
+          className='text-[#f9f9f9] border-2 border-[#f9f9f9] px-4 py-2 md:px-5 md:py-3 rounded-3xl hover:-translate-y-1 hover:shadow-md duration-300 cursor-pointer'
+        >
           Learn More
-        </button>
-        </div>
+        </Link>
+      </div>
 
       </div>
 

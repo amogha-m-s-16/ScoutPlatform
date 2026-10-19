@@ -1,10 +1,10 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import AboutSection from '../Components/AboutSection';
 import { PiCashRegisterLight } from "react-icons/pi";
 import { RiTargetFill } from "react-icons/ri";
 import { TbConnection } from "react-icons/tb";
 import { GrGrow } from "react-icons/gr";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Info = [
   {
@@ -43,7 +43,6 @@ const About = () => {
       <AboutSection />
       <div >
       <motion.div
-        
         className='bg-black border-t-2 p-5 md:px-13 lg:px-20 md:py-10'
       >
         <h1 className='text-white text-3xl md:text-4xl lg:text-5xl text-center font-instrument font-semibold tracking-wider py-5'>
@@ -56,8 +55,7 @@ const About = () => {
         
         <div className='md:flex md:flex-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 px-10 py-5'>
         {Info.map((item) => (
-
-          <div className='flex flex-col justify-between max-w-3xl w-full bg-white cursor-pointer border-2 border-black/10 rounded-2xl shadow-white/30 shadow-md px-5 py-3'>
+          <div key={item.ind} className='flex flex-col justify-between max-w-3xl w-full bg-white cursor-pointer border-2 border-black/10 rounded-2xl shadow-white/30 shadow-md px-5 py-3'>
             <div className='flex py-5'>
               <span className='p-3 text-[16px] md:text-[18px] lg:text-[20px] text-red-500 border-2 border-black/10 rounded-4xl'>
                 {item.logo}

@@ -10,7 +10,7 @@ function App() {
     <>
       <Navbar />
       
-      <main>
+      <main className='h-full bg-black'>
         <Home />
         <About />
         <Contact />

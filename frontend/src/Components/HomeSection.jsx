@@ -4,7 +4,7 @@ import { BsDashLg, BsArrowRight } from "react-icons/bs";
 const HomeSection = () => {
   return (
     <div 
-      className='relative min-h-[calc(100vh-70px)] w-full flex flex-col justify-center items-start px-6 md:px-14 lg:px-20 bg-cover bg-center bg-no-repeat opacity-70'
+      className='relative min-h-[50vh] md:min-h-[90vh] w-full flex flex-col justify-center items-start px-6 md:px-14 lg:px-20 bg-cover bg-center bg-no-repeat opacity-70'
       style={{ backgroundImage: "url('/home.png')" }}
     >
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { CgMenuLeft } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
+import { FiUser } from "react-icons/fi";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -32,8 +33,8 @@ const Navbar = () => {
           <li className='p-2 text-[16px] text-[#5a5b5c] hover:text-black duration-300 ease-in'><a href="">About</a></li>
         </ul>
 
-        <button className='bg-red-600 text-white px-4 py-2 rounded-full hover:-translate-y-1 hover:shadow-md transition duration-300 cursor-pointer'>
-          Sign In
+        <button className='flex bg-red-600 text-white px-4 py-2 rounded-full hover:-translate-y-1 hover:shadow-md transition duration-300 cursor-pointer'>
+          Sign In <FiUser className='ml-2 mt-1'/>
         </button>
       </div>
 

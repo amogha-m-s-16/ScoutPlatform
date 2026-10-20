@@ -62,7 +62,7 @@ const Navbar = () => {
 
         <Link
           to="/login"
-          className='flex items-center bg-red-600 text-white px-5 py-2 rounded-full hover:-translate-y-0.5 hover:shadow-md transition duration-300 cursor-pointer font-google-sans text-sm'
+          className='flex items-center bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 hover:-translate-y-0.5 hover:shadow-md transition duration-300 cursor-pointer font-google-sans text-sm'
         >
           <span>Sign In</span>
           <FiUser className='ml-2 text-base' />

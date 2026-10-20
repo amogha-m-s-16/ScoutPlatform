@@ -5,7 +5,7 @@ import { BsDashLg, BsArrowRight } from "react-icons/bs";
 const HomeSection = () => {
   return (
     <div 
-      className='relative min-h-[50vh] md:min-h-[90vh] w-full flex flex-col justify-center items-start px-6 md:px-14 lg:px-20 bg-cover bg-center bg-no-repeat opacity-70'
+      className='relative md:min-h-[90vh] min-h-[440px] w-full flex flex-col justify-center items-start px-6 md:px-14 lg:px-20 bg-cover bg-center bg-no-repeat opacity-70'
       style={{ backgroundImage: "url('/home.png')" }}
     >
 
@@ -23,10 +23,10 @@ const HomeSection = () => {
       <div className='flex items-center gap-5 md:gap-15 lg:gap-20 p-5 md:px-13 lg:px-20 text-[13px] md:text-[17px] font-google-sans'>
         <Link 
           to="/talents"
-          className='flex items-center text-white px-4 py-2 md:px-5 md:py-3 rounded-3xl bg-red-600 cursor-pointer hover:scale-95 hover:shadow-md duration-300 ease-in-out'
+          className='flex items-center text-white px-4 py-2 md:px-5 md:py-3 rounded-3xl bg-red-600 cursor-pointer hover:-translate-y-1 hover:bg-red-700 duration-300 ease-in-out'
         >
           <span>Explore Talents</span>
-          <BsArrowRight className='hover:rotate-90 duration-300 ml-2 mt-0.5'/>
+          <BsArrowRight className='group-hover:rotate-90 transition-transform duration-300 ml-2 mt-0.5'/>
         </Link>
 
         <Link 

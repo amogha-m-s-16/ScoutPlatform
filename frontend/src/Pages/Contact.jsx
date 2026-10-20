@@ -20,7 +20,7 @@ const Contact = () => {
       <div className='px-5 lg:px-10'>
         <Link 
           to="/signin"
-          className='inline-flex items-center px-5 py-2.5 bg-red-600 text-white border-2 border-red-600 rounded-full hover:-translate-y-0.5 duration-300 ease-in-out cursor-pointer font-google-sans text-sm'
+          className='inline-flex items-center px-5 py-2.5 bg-red-600 text-white border-2 border-red-600 rounded-full hover:bg-red-700 hover:-translate-y-0.5 duration-300 ease-in-out cursor-pointer font-google-sans text-sm'
         >
           <span>Join the Movement</span>
           <BsArrowUpRight className='ml-2 text-sm'/>

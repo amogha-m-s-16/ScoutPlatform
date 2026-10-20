@@ -39,7 +39,7 @@ const Info = [
 const About = () => {
 
   return (
-    <div className='min-h-[70vh] md:min-h-[100vh] overflow-x-hidden min-h-screen bg-[#F7F7F5]'>
+    <div className='min-h-[70vh] overflow-x-hidden min-h-screen bg-[#F7F7F5]'>
       <AboutSection />
       <div >
       <motion.div

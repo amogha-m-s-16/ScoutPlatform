@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FiArrowLeft, FiUser, FiMail, FiPhone, FiLock, FiCheck, FiEye, FiEyeOff } from 'react-icons/fi'
+import { FiArrowLeft, FiUser, FiMail, FiPhone, FiLock, FiEye, FiEyeOff } from 'react-icons/fi'
 import { PiPersonThin } from 'react-icons/pi'
 import { LiaCampgroundSolid } from 'react-icons/lia'
+import { FcGoogle } from 'react-icons/fc'
 
 const SignIn = () => {
   const [isSignUp, setIsSignUp] = useState(true)
@@ -27,43 +28,41 @@ const SignIn = () => {
   }
 
   return (
-    <div className='min-h-[175vh] lg:min-h-screen bg-[#F7F7F5] flex flex-col justify-between p-4 sm:p-6 md:p-8 lg:p-10'>
+    <div className='min-h-screen w-full bg-[#F7F7F5] flex flex-col justify-between p-4 sm:p-6 lg:p-10'>
       
-      <div className='max-w-7xl w-full mx-auto flex items-center justify-between pb-6'>
+      <div className='max-w-7xl w-full mx-auto flex items-center justify-between pb-4 sm:pb-6'>
         <Link 
           to='/' 
-          className='group inline-flex items-center gap-2 text-neutral-600 hover:text-black transition-colors font-jet-mono  py-1.5 px-3 rounded-full bg-white border-2 border-black/5 shadow-md hover:bg-black/5'
+          className='group inline-flex items-center gap-2 text-neutral-600 hover:text-black transition-colors font-jet-mono py-1.5 px-3 rounded-full bg-white border border-black/10 shadow-xs hover:bg-black/5'
         >
           <FiArrowLeft className='group-hover:-translate-x-1 transition-transform duration-200' />
-          <span className='text-[12px] lg:text-[14px]'>Back to Home</span>
+          <span className='text-xs sm:text-sm'>Back to Home</span>
         </Link>
-
       </div>
 
-      <div className='max-w-7xl w-full mx-auto flex-1 flex flex-col lg:flex-row items-stretch gap-6 md:gap-8 rounded-3xl overflow-hidden'>
+      <div className='max-w-7xl w-full mx-auto flex-1 flex flex-col lg:flex-row items-stretch gap-6 lg:gap-8 rounded-3xl'>
 
         <div 
-          className='relative lg:w-5/12 min-h-[380px] sm:min-h-[440px] lg:min-h-[640px] rounded-3xl overflow-hidden bg-cover bg-center border border-black/10 shadow-lg flex flex-col justify-end p-6 sm:p-8 md:p-10 text-white'
+          className='relative w-full lg:w-5/12 min-h-[260px] sm:min-h-[320px] lg:min-h-full rounded-3xl overflow-hidden bg-cover bg-center border border-black/10 shadow-md flex flex-col justify-end p-6 sm:p-8 md:p-10 text-white'
           style={{ backgroundImage: "url('/signin.png')" }}
         >
 
-          <div className='absolute inset-0 bg-gradient-to-t to-black/20 pointer-events-none' />
+          <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 pointer-events-none' />
 
-          <div className='max-w-md'>
-            <h1 className='text-4xl sm:text-5xl lg:text-6xl text-white font-instrument font-normal tracking-normal'>
+          <div className='relative z-10 max-w-md'>
+            <h1 className='text-3xl sm:text-5xl lg:text-6xl text-white font-instrument font-normal tracking-normal leading-tight'>
               Your Talent. <br />
-              <span className='font-instrument italic font-semibold text-orange-500'>Our  <span className='text-white'>Platform. </span> </span><br />
+              <span className='font-instrument italic font-semibold text-orange-500'>Our <span className='text-white'>Platform.</span></span><br />
               A Brighter Future.
             </h1>
 
-            <p className='mt-4 text-xs sm:text-sm text-neutral-300 font-google-sans leading-relaxed'>
+            <p className='mt-3 sm:mt-4 text-xs sm:text-sm text-neutral-300 font-google-sans leading-relaxed'>
               Connecting undiscovered grassroots athletes directly to verified coaches, scouts, and trials.
             </p>
-
           </div>
         </div>
 
-        <div className='lg:w-7/12 bg-white border border-black/10 rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-sm flex flex-col justify-center'>
+        <div className='w-full lg:w-7/12 bg-white border border-black/10 rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm flex flex-col justify-center'>
           
           <div className='max-w-xl w-full mx-auto'>
 
@@ -109,6 +108,22 @@ const SignIn = () => {
               </div>
             )}
 
+            <button
+              type='button'
+              className='w-full flex items-center justify-center gap-3 py-3 px-5 rounded-full border border-neutral-300 bg-white hover:bg-neutral-50 hover:border-neutral-400 text-neutral-800 font-google-sans font-medium text-sm transition-all duration-200 shadow-2xs hover:shadow-xs cursor-pointer mb-5'
+            >
+              <FcGoogle className='text-xl' />
+              <span>Continue with Google</span>
+            </button>
+
+            <div className='flex items-center mb-6'>
+              <div className='flex-1 border-t border-neutral-200' />
+              <span className='px-3 text-[11px] font-jet-mono uppercase tracking-wider text-neutral-400 bg-white'>
+                or continue with email
+              </span>
+              <div className='flex-1 border-t border-neutral-200' />
+            </div>
+
             <form onSubmit={handleSubmit} className='space-y-4'>
               {isSignUp && (
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
@@ -126,7 +141,7 @@ const SignIn = () => {
                         name='firstName'
                         value={formData.firstName}
                         onChange={handleChange}
-                        className='w-full border border-neutral-300 focus:border-red-600 focus:ring-2 focus:ring-red-500/20 rounded-xl px-4 py-2.5 pl-10 text-sm font-jet-mono bg-white outline-none transition-all'
+                        className='w-full border border-neutral-300 focus:border-white focus:ring-2 focus:ring-red-500/20 rounded-xl px-4 py-2.5 pl-10 text-sm font-jet-mono bg-white outline-none transition-all'
                         placeholder='Albert'
                         required
                       />
@@ -148,7 +163,7 @@ const SignIn = () => {
                         name='lastName'
                         value={formData.lastName}
                         onChange={handleChange}
-                        className='w-full border border-neutral-300 focus:border-red-600 focus:ring-2 focus:ring-red-500/20 rounded-xl px-4 py-2.5 pl-10 text-sm font-jet-mono bg-white outline-none transition-all'
+                        className='w-full border border-neutral-300 focus:border-white focus:ring-2 focus:ring-red-500/20 rounded-xl px-4 py-2.5 pl-10 text-sm font-jet-mono bg-white outline-none transition-all'
                         placeholder='Einstein'
                         required
                       />
@@ -172,7 +187,7 @@ const SignIn = () => {
                     name='email'
                     value={formData.email}
                     onChange={handleChange}
-                    className='w-full border border-neutral-300 focus:border-red-600 focus:ring-2 focus:ring-red-500/20 rounded-xl px-4 py-2.5 pl-10 text-sm font-jet-mono bg-white outline-none transition-all'
+                    className='w-full border border-neutral-300 focus:border-white focus:ring-2 focus:ring-red-500/20 rounded-xl px-4 py-2.5 pl-10 text-sm font-jet-mono bg-white outline-none transition-all'
                     placeholder='example@domain.com'
                     required
                   />
@@ -195,7 +210,7 @@ const SignIn = () => {
                       name='phone'
                       value={formData.phone}
                       onChange={handleChange}
-                      className='w-full border border-neutral-300 focus:border-red-600 focus:ring-2 focus:ring-red-500/20 rounded-xl px-4 py-2.5 pl-10 text-sm font-jet-mono bg-white outline-none transition-all'
+                      className='w-full border border-neutral-300 focus:border-white focus:ring-2 focus:ring-red-500/20 rounded-xl px-4 py-2.5 pl-10 text-sm font-jet-mono bg-white outline-none transition-all'
                       placeholder='+91 98765 43210'
                       required
                     />
@@ -219,7 +234,7 @@ const SignIn = () => {
                       name='password'
                       value={formData.password}
                       onChange={handleChange}
-                      className='w-full border border-neutral-300 focus:border-red-600 focus:ring-2 focus:ring-red-500/20 rounded-xl px-4 py-2.5 pl-10 pr-10 text-sm font-jet-mono bg-white outline-none transition-all'
+                      className='w-full border border-neutral-300 focus:border-white focus:ring-2 focus:ring-red-500/20 rounded-xl px-4 py-2.5 pl-10 pr-10 text-sm font-jet-mono bg-white outline-none transition-all'
                       placeholder='••••••••'
                       required
                     />
@@ -251,18 +266,18 @@ const SignIn = () => {
                         name='confirmPassword'
                         value={formData.confirmPassword}
                         onChange={handleChange}
-                        className='w-full border border-neutral-300 focus:border-red-600 focus:ring-2 focus:ring-red-500/20 rounded-xl px-4 py-2.5 pl-10 pr-10 text-sm font-jet-mono bg-white outline-none transition-all'
+                        className='w-full border border-neutral-300 focus:border-white focus:ring-2 focus:ring-red-500/20 rounded-xl px-4 py-2.5 pl-10 pr-10 text-sm font-jet-mono bg-white outline-none transition-all'
                         placeholder='••••••••'
                         required
                       />
                       <FiLock className='absolute left-3.5 top-3 text-neutral-400 text-sm' />
                       <button
                         type='button'
-                        
+                        onClick={() => setShowConfirmPassword(prev => !prev)}
                         aria-label={showConfirmPassword ? 'Hide confirm password' : 'Show confirm password'}
                         className='absolute right-3.5 top-3 text-neutral-400 hover:text-neutral-700 transition cursor-pointer'
                       >
-                        
+                        {showConfirmPassword ? <FiEyeOff className='text-sm' /> : <FiEye className='text-sm' />}
                       </button>
                     </div>
                   </div>

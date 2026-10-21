@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const navClass = scrolled
     ? 'bg-white/80 backdrop-blur-md border-b border-black/10 shadow-sm'
-    : 'bg-white/40 backdrop-blur-xs border-b-2 border-[#f5f5f5]';
+    : 'bg-[#f9f9f9] backdrop-blur-xs border-b border-[#f9f9f9]';
 
   const linkClass = ({ isActive }) =>
     `p-2 text-[16px] duration-300 ease-in transition-colors ${

@@ -36,7 +36,6 @@ const Navbar = () => {
   return (
     <div className='sticky top-0 left-0 z-50'>
 
-      {/* Desktop Navbar */}
       <div className={`hidden font-poppins text-black md:flex md:justify-between md:items-center px-6 py-3 transition-all duration-300 ${navClass}`}>
         <Link to="/" className=''>
           

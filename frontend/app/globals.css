@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+
+}
+
+@theme {
+    --font-sans: var(--font-jakarta), sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+
+  }
+}
+
+body {
+
+}

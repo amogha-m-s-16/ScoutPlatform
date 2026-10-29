@@ -12,18 +12,27 @@ const Navbar = () => {
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setScroll(window.scrollY > 100);
+      if(!ticking) {
+        window.requestAnimationFrame(() => {
+          setScroll(window.scrollY > 10);
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+      
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrolled = scroll ? 
-                            'bg-white/30 backdrop-blur-md border-b-2 border-neutral-100 py-4' : 'bg-white py-7'
+  const scrolled = scroll ? 'bg-white/80 backdrop-blur-xs border-b-2 border-neutral-100' : 'bg-white  border-b-2 border-transparent'
   return (
-    <div className={`${jakarta.className} top-0 left-0 sticky z-50 hidden md:display font-semibold md:flex md:justify-between items-center px-20 ${scrolled} transition-ease `}>
+    <div className={`${jakarta.className} top-0 left-0 sticky z-50 hidden md:display py-5 font-semibold md:flex md:justify-between items-center px-20 ${scrolled}`}>
       <h1>Talent Scout</h1>
 
       <ul className='flex gap-10'>
@@ -33,8 +42,8 @@ const Navbar = () => {
       </ul>
 
       <div className='flex gap-10'>
-        <button className='cursor-pointer px-5 py-2'><Link href=""> Log in </Link></button>
-        <button className='cursor-pointer bg-black text-white rounded-full px-4 py-2 hover:bg-black/85'><Link href=""> Get Started </Link></button>
+        <button className='cursor-pointer px-5 py-2'><Link href="/login"> Log in </Link></button>
+        <button className='cursor-pointer bg-black text-white rounded-full px-4 py-2 hover:bg-black/85'><Link href="/signin"> Get Started </Link></button>
       </div>
     </div>
 

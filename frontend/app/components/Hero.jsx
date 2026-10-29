@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { IoMdArrowForward } from "react-icons/io";
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
 })

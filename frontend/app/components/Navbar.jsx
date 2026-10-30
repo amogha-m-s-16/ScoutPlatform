@@ -36,7 +36,7 @@ const Navbar = () => {
       <h1>Talent Scout</h1>
 
       <ul className='flex gap-10'>
-        <Link href="" className='hover:text-neutral-500 duration-200'>Home</Link> 
+        <Link href="/" className='hover:text-neutral-500 duration-200'>Home</Link> 
         <Link href="" className='hover:text-neutral-500 duration-200'>About</Link> 
         <Link href="" className='hover:text-neutral-500 duration-200'>Talent</Link> 
       </ul>

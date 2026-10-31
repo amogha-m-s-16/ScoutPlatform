@@ -33,7 +33,9 @@ const Navbar = () => {
   const scrolled = scroll ? 'bg-white/80 backdrop-blur-xs border-b-2 border-neutral-100' : 'bg-white  border-b-2 border-transparent'
   return (
     <div className={`${jakarta.className} top-0 left-0 sticky z-50 hidden md:display py-5 font-semibold md:flex md:justify-between items-center px-20 ${scrolled}`}>
-      <h1>Talent Scout</h1>
+      <Link href="">
+        <img src="" alt="" />
+      </Link>
 
       <ul className='flex gap-10'>
         <Link href="/" className='hover:text-neutral-500 duration-200'>Home</Link> 

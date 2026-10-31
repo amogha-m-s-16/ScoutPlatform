@@ -28,7 +28,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []); /*ams brw */
+  }, []); 
 
   const scrolled = scroll ? 'bg-white/80 backdrop-blur-xs border-b-2 border-neutral-100' : 'bg-white  border-b-2 border-transparent'
   return (

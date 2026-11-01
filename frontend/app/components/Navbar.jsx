@@ -12,18 +12,9 @@ const Navbar = () => {
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
-    let ticking = false;
 
     const handleScroll = () => {
-      if(!ticking) {
-        window.requestAnimationFrame(() => {
-          setScroll(window.scrollY > 10);
-          ticking = false;
-        });
-
-        ticking = true;
-      }
-      
+        setScroll(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -40,7 +31,7 @@ const Navbar = () => {
       <ul className='flex gap-10'>
         <Link href="/" className='hover:text-neutral-500 duration-200'>Home</Link> 
         <Link href="" className='hover:text-neutral-500 duration-200'>About</Link> 
-        <Link href="" className='hover:text-neutral-500 duration-200'>Talent</Link> 
+        <Link href="" className='hover:text-neutral-500 duration-200'>Talents</Link> 
       </ul>
 
       <div className='flex gap-10'>

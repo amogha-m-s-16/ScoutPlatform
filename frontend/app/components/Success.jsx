@@ -34,6 +34,8 @@ const Success = () => {
             Explore Stories <IoMdArrowDown className='inline ml-1' />
         </p>
 
+
+
         <div className='grid grid-cols-1 md:grid-cols-3 gap-7 lg:gap-10 py-10 lg:py-10 hover:cursor-pointer'>
                 {success.map((item) => (
                     <div key={item.id} className='flex flex-col justify-end rounded-4xl bg-white h-70 md:h-85 lg:h-100'>

@@ -23,20 +23,19 @@ const Navbar = () => {
 
   const scrolled = scroll ? 'bg-white/80 backdrop-blur-xs border-b-2 border-neutral-100' : 'bg-white  border-b-2 border-transparent'
   return (
-    <div className={`${jakarta.className} top-0 left-0 sticky z-50 hidden md:display py-5 font-semibold md:flex md:justify-between items-center px-20 ${scrolled}`}>
-      <Link href="">
-        <img src="" alt="" />
+    <div className={`${jakarta.className} bg-white top-0 left-0 sticky z-50 hidden md:display py-3 font-semibold md:flex md:justify-between items-center px-20 ${scrolled}`}>
+      <Link href="/">
+        <img src="./logo.png" alt="Logo" className='h-10 w-15 center mt-1'/>
       </Link>
 
       <ul className='flex gap-10'>
-        <Link href="/" className='hover:text-neutral-500 duration-200'>Home</Link> 
         <Link href="" className='hover:text-neutral-500 duration-200'>About</Link> 
         <Link href="" className='hover:text-neutral-500 duration-200'>Talents</Link> 
       </ul>
 
       <div className='flex gap-10'>
-        <button className='cursor-pointer px-5 py-2'><Link href="/login"> Log in </Link></button>
-        <button className='cursor-pointer bg-black text-white rounded-full px-4 py-2 hover:bg-black/85'><Link href="/signin"> Get Started </Link></button>
+        <Link href="/login" className='cursor-pointer px-5 py-2'> Log in </Link>
+        <Link href="/signin" className='cursor-pointer bg-black text-white rounded-full px-4 py-2 hover:bg-black/85'> Get Started </Link>
       </div>
     </div>
 

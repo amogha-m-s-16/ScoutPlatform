@@ -18,7 +18,7 @@ const Home = () => {
            Where rural talent <br /> gets discovered and <br />  goes further.
       </h1>
 
-      <p className='text-center text-neutral-600 text-[15px] md:text-[17px] pt-7 lg:pt-10 lg:text-[19px]'>
+      <p className='font-semibold text-center text-neutral-400 text-[15px] md:text-[17px] pt-7 lg:pt-10 lg:text-[19px]'>
         A platform connecting promising athletes <br /> from rural communities with scouts, coaches and opportunities.
       </p>
 

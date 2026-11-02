@@ -11,7 +11,9 @@ const Login = () => {
   return (
     <div className={`${jakarta.className} md:flex min-h-screen max-w-full`}>
       <div className='md:max-w-1/2 w-full bg-black min-h-full flex flex-col justify-center items-center py-10 px-10 lg:px-40'>
-          <h1 className='text-white text-3xl font-semibold pb-15'>Welcome Back</h1>
+          <img src="./white-logo.png" alt="Logo"  className='h-10 w-14 mb-9 cursor-pointer'/>
+          
+          <h1 className='text-white text-3xl text-center font-semibold pb-15'>Welcome Back</h1>
 
           <Link href="" className='flex flex-row justify-center items-center font-bold border-2 border-neutral-700 rounded-full w-full px-4 py-3 hover:bg-neutral-800 ease-in-out duration-200'>
             <FcGoogle className='mr-2.5 text-[22px]'/> <span className='text-white text-center inline'> Continue with Google</span>
